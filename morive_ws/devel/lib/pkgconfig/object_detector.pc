@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/morive_ws/devel
+
+Name: object_detector
+Description: Description of object_detector
+Version: 0.0.0
+Cflags: -I/home/ubuntu/morive_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

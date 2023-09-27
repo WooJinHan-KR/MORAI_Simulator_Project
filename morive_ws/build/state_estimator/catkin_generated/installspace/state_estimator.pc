@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/morive_ws/install
+
+Name: state_estimator
+Description: Description of state_estimator
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime
