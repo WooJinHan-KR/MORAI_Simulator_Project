@@ -28,7 +28,7 @@ accel, brake = 0 ~ 1
 
 (수정전)       
   
-  		if output > 0.0:
+  	if output > 0.0:
                 self.ctrl_cmd_msg.accel = output
                 self.ctrl_cmd_msg.brake = 0.0
 
@@ -38,7 +38,7 @@ accel, brake = 0 ~ 1
 
 (수정후)       
   
-  		if output > 0.0:
+  	if output > 0.0:
                 self.ctrl_cmd_msg.accel = output
                 self.ctrl_cmd_msg.brake = 0.0
 
