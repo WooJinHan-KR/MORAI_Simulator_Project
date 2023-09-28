@@ -9,11 +9,11 @@ rostopic echo Object_topic 으로 npc_list 로 niro 차량정보를 받을 수 �
 
 차량길이 4.355 를 적용하기 위해 ego_vehicle을 niro 로 교체하였다.
 
-(수정전)
+#### (수정전)
   
 	self.vehicle_length = 3.16 (임의값)
    
-(수정후)		
+#### (수정후)		
   
 	self.vehicle_length = 4.355 # morive kia niro (hev)
 
@@ -26,7 +26,7 @@ accel, brake = 0 ~ 1
 
 해결방법 : brake를 0 ~ 0.5 까지 무시하는 코드 추가.
 
-(수정전)       
+#### (수정전)       
   
   	    if output > 0.0:
                 self.ctrl_cmd_msg.accel = output
@@ -36,7 +36,7 @@ accel, brake = 0 ~ 1
         	self.ctrl_cmd_msg.accel = 0.0
                 self.ctrl_cmd_msg.brake = -output
 
-(수정후)       
+#### (수정후)       
   
   	    if output > 0.0:
                 self.ctrl_cmd_msg.accel = output
@@ -63,12 +63,12 @@ ocilation 문제인가 싶어서 d_gain을 키워봤다.
 
 초반 합류구간에서는 성능이 나아졌지만, 톨게이트 통과 이후 나아지지 않았음.
 
-(수정전)
+#### (수정전)
 
 	p_gain = 0.3
 	d_gain = 0.03
 
-(수정후)
+#### (수정후)
 
 	p_gain = 0.3
 	d_gain = 0.1
@@ -83,11 +83,11 @@ lfd_gain 을 2.0으로 키워서 lfd를 속도의 2배크기로 설정하였다.
 
 따라서 lfd_gain 을 1.0으로 수정.
 
-(수정전)
+#### (수정전)
 
 	self.lfd_gain = 0.78
    
-(수정후)
+#### (수정후)
  
 	self.lfd_gain = 1.0 # morive default 0.78
    
@@ -100,11 +100,11 @@ lfd_gain 값을 수정하였으므로 max_lfd가 부족하지 않게 설정.
 
 #이후 lfd_gain 1.0, target_velocity = 60에 맞게 수정 필요(?)
 
-(수정전)
+#### (수정전)
 
 	self.max_lfd = 30
    
-(수정후)
+#### (수정후)
 
 	self.max_lfd = 80 # morive default 30
    
@@ -122,10 +122,10 @@ morai 에서 받아오는 gps 센서의 위치가 문제일 거라고 생각해�
 
 link_set.json의 max_speed : 60 을 기반으로  target_velocity 를 증가시켰다.
 
-(수정전)		
+#### (수정전)		
  
  	self.target_velocity = 40
    
-(수정후)		
+#### (수정후)		
  
  	self.target_velocity = 60 # morive max_speed": 60, default : 40
