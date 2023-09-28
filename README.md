@@ -54,48 +54,47 @@ accel, brake = 0 ~ 1
 
 
 ## 2. S자 주행하는 문제.
-	### 2-1. PD gain값 수정.
+### 2-1. PD gain값 수정.
 
-		overshooting 문제인가 싶어서 p_gain을 줄여봤지만 실패.
-		ocilation 문제인가 싶어서 d_gain을 키워봤다. 
-			초반 합류구간에서는 성능이 나아졌지만, 톨게이트 통과 이후 나아지지 않았음
-		(수정전)
+	overshooting 문제인가 싶어서 p_gain을 줄여봤지만 실패.
+	ocilation 문제인가 싶어서 d_gain을 키워봤다. 
+		초반 합류구간에서는 성능이 나아졌지만, 톨게이트 통과 이후 나아지지 않았음
+	(수정전)
 
-				p_gain = 0.3
-				d_gain = 0.03
-   
-		(수정후)
+			p_gain = 0.3
+			d_gain = 0.03
 
-				p_gain = 0.3
-				d_gain = 0.1
+	(수정후)
+
+			p_gain = 0.3
+			d_gain = 0.1
 	
-	### 2-2. lfd_gain 값 수정.
+### 2-2. lfd_gain 값 수정.
 		
-		lfd 가 너무 작을 때, 진동하는 문제가 있음을 인지.
-		lfd_gain 을 2.0으로 키워서 lfd를 속도의 2배크기로 설정하였다. 
-			결과 : S자 주행은 해결했지만 변화에 둔감하다고 판단.
-		따라서 lfd_gain 을 1.0으로 수정.
+	lfd 가 너무 작을 때, 진동하는 문제가 있음을 인지.
+	lfd_gain 을 2.0으로 키워서 lfd를 속도의 2배크기로 설정하였다. 
+		결과 : S자 주행은 해결했지만 변화에 둔감하다고 판단.
+	따라서 lfd_gain 을 1.0으로 수정.
+	(수정전)
 
-		(수정전)
-
-			self.lfd_gain = 0.78
+		self.lfd_gain = 0.78
    
-		(수정후)
-
-			self.lfd_gain = 1.0 # morive default 0.78
+	(수정후)
+ 
+		self.lfd_gain = 1.0 # morive default 0.78
    
 
-	### 2-3. max_lfd 값 수정.
-		lfd_gain 값을 수정하였으므로 max_lfd가 부족하지 않게 설정.
-		#lfd_gain 2.0, target_velocity = 40 에 맞게 설정.
-		#이후 lfd_gain 1.0, target_velocity = 60에 맞게 수정 필요(?)
-		(수정전)
+### 2-3. max_lfd 값 수정.
+	lfd_gain 값을 수정하였으므로 max_lfd가 부족하지 않게 설정.
+	#lfd_gain 2.0, target_velocity = 40 에 맞게 설정.
+	#이후 lfd_gain 1.0, target_velocity = 60에 맞게 수정 필요(?)
+	(수정전)
 
-			self.max_lfd = 30
+		self.max_lfd = 30
    
-		(수정후)
+	(수정후)
 
-			self.max_lfd = 80 # morive default 30
+		self.max_lfd = 80 # morive default 30
    
 		
 
