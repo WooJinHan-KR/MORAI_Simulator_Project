@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ubuntu/morive_ws/build/gtest/cmake_install.cmake")
+  include("/home/ubuntu/morive_ws/build/morai_msgs/cmake_install.cmake")
   include("/home/ubuntu/morive_ws/build/interface/cmake_install.cmake")
   include("/home/ubuntu/morive_ws/build/lateral_controller/cmake_install.cmake")
   include("/home/ubuntu/morive_ws/build/longitudinal_controller/cmake_install.cmake")

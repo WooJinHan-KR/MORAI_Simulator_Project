@@ -52,12 +52,12 @@ class pure_pursuit :
         self.forward_point = Point()
         self.current_postion = Point()
 
-        self.vehicle_length = 3.16
+        self.vehicle_length = 4.355 # morive kia niro (hev)
         self.lfd = 3
         self.min_lfd = 5
-        self.max_lfd = 30
-        self.lfd_gain = 0.78
-        self.target_velocity = 40
+        self.max_lfd = 80 # morive default 30
+        self.lfd_gain = 1.0 # morive default 0.78
+        self.target_velocity = 60 # morive max_speed": 60, default : 40
 
         self.pid = pidControl()
         self.vel_planning = velocityPlanning(self.target_velocity/3.6, 0.15)
@@ -90,6 +90,12 @@ class pure_pursuit :
                 if output > 0.0:
                     self.ctrl_cmd_msg.accel = output
                     self.ctrl_cmd_msg.brake = 0.0
+
+                # morive brake tunning
+                elif -0.5 < output <= 0.0:
+                    self.ctrl_cmd_msg.accel = 0.0
+                    self.ctrl_cmd_msg.brake = 0.0
+
                 else:
                     self.ctrl_cmd_msg.accel = 0.0
                     self.ctrl_cmd_msg.brake = -output
@@ -177,9 +183,9 @@ class pure_pursuit :
 
 class pidControl:
     def __init__(self):
-        self.p_gain = 0.3
+        self.p_gain = 0.3   # defalt 0.3
         self.i_gain = 0.00
-        self.d_gain = 0.03
+        self.d_gain = 0.1  # defalt 0.03
         self.prev_error = 0
         self.i_control = 0
         self.controlTime = 0.02
