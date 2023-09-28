@@ -54,6 +54,7 @@ accel, brake = 0 ~ 1
 
 
 ## 2. S자 주행하는 문제.
+
 ### 2-1. PD gain값 수정.
 
 	overshooting 문제인가 싶어서 p_gain을 줄여봤지만 실패.
