@@ -6,11 +6,12 @@
 ## 0. 차량 정보 수정.
 
 rostopic echo Object_topic 으로 npc_list 로 niro 차량정보를 받을 수 있었다.
+
 차량길이 4.355 를 적용하기 위해 ego_vehicle을 niro 로 교체하였다.
 
 (수정전)
   
-	self.vehicle_length = 3.16 (임의값)
+self.vehicle_length = 3.16 (임의값)
    
 (수정후)		
   
@@ -57,8 +58,10 @@ accel, brake = 0 ~ 1
 ### 2-1. PD gain값 수정.
 
 overshooting 문제인가 싶어서 p_gain을 줄여봤지만 실패.
+
 ocilation 문제인가 싶어서 d_gain을 키워봤다. 
-초반 합류구간에서는 성능이 나아졌지만, 톨게이트 통과 이후 나아지지 않았음
+
+초반 합류구간에서는 성능이 나아졌지만, 톨게이트 통과 이후 나아지지 않았음.
 
 (수정전)
 
@@ -110,7 +113,9 @@ lfd_gain 값을 수정하였으므로 max_lfd가 부족하지 않게 설정.
 
 ## 4. 오른쪽 차선에 치우쳐서 주행하는 문제.
 
-morai 에서 받아오는 gps 센서의 위치가 문제일 거라고 생각해서 gps센서를 오른쪽으로 치우쳐서 부착. 해결.
+morai 에서 받아오는 gps 센서의 위치가 문제일 거라고 생각해서 gps센서를 오른쪽으로 치우쳐서 부착. 
+
+해결.
 
 		
 ## 5. target_velocity 수정
