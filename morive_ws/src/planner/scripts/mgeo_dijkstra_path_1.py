@@ -49,14 +49,17 @@ class dijkstra_path_pub :
 
         self.global_planner=Dijkstra(self.nodes,self.links)
 
+        self.node_list = ['A119BS010209', 'A119BS010324', 'A119BS010184']
+
         #TODO: (2) 시작 Node 와 종료 Node 정의
-        self.start_node = 'A119BS010209'
-        self.end_node = 'A119BS010184'
+        #self.start_node = 'A119BS010209'
+        #self.end_node = 'A119BS010184'
 
         self.global_path_msg = Path()
         self.global_path_msg.header.frame_id = '/map'
 
-        self.global_path_msg = self.calc_dijkstra_path_node(self.start_node, self.end_node)
+        #self.global_path_msg = self.calc_dijkstra_path_node(self.start_node, self.end_node)
+        self.global_path_msg = self.calc_dijkstra_path_node(self.node_list)
 
         rate = rospy.Rate(10) # 10hz
         while not rospy.is_shutdown():
@@ -64,22 +67,23 @@ class dijkstra_path_pub :
             self.global_path_pub.publish(self.global_path_msg)
             rate.sleep()
 
-    def calc_dijkstra_path_node(self, start_node, end_node):
-
-        result, path = self.global_planner.find_shortest_path(start_node, end_node)
+    def calc_dijkstra_path_node(self, node_list):
 
         #TODO: (10) dijkstra 경로 데이터를 ROS Path 메세지 형식에 맞춰 정의
         out_path = Path()
         out_path.header.frame_id = '/map'
 
-        for waypoint in path["point_path"] :
-            path_x = waypoint[0]
-            path_y = waypoint[1]
-            read_pose = PoseStamped()
-            read_pose.pose.position.x = path_x
-            read_pose.pose.position.y = path_y
-            read_pose.pose.orientation.w = 1
-            out_path.poses.append(read_pose)   
+        for i in range(len(node_list)-1):
+            result, path = self.global_planner.find_shortest_path(node_list[i], node_list[i + 1])
+
+            for waypoint in path["point_path"] :
+                path_x = waypoint[0]
+                path_y = waypoint[1]
+                read_pose = PoseStamped()
+                read_pose.pose.position.x = path_x
+                read_pose.pose.position.y = path_y
+                read_pose.pose.orientation.w = 1
+                out_path.poses.append(read_pose)   
 
         return out_path
 
