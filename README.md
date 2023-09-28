@@ -11,7 +11,7 @@ rostopic echo Object_topic 으로 npc_list 로 niro 차량정보를 받을 수 �
 
 (수정전)
   
-self.vehicle_length = 3.16 (임의값)
+	self.vehicle_length = 3.16 (임의값)
    
 (수정후)		
   
@@ -28,7 +28,7 @@ accel, brake = 0 ~ 1
 
 (수정전)       
   
-  	if output > 0.0:
+  		if output > 0.0:
                 self.ctrl_cmd_msg.accel = output
                 self.ctrl_cmd_msg.brake = 0.0
 
@@ -38,7 +38,7 @@ accel, brake = 0 ~ 1
 
 (수정후)       
   
-  	if output > 0.0:
+  		if output > 0.0:
                 self.ctrl_cmd_msg.accel = output
                 self.ctrl_cmd_msg.brake = 0.0
 
