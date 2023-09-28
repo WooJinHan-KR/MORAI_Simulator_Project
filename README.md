@@ -1,7 +1,7 @@
 # ad-control1-finalproject-team4
 자율주행 데브코스 제어 1기 최종프로젝트 - 4팀
 
-### <제어 튜닝>
+# <제어 튜닝>
 
 ## 0. 차량 정보 수정.
 
@@ -55,7 +55,7 @@ accel, brake = 0 ~ 1
 
 ## 2. S자 주행하는 문제.
 
-	# 2-1. PD gain값 수정.
+	### 2-1. PD gain값 수정.
 
 		overshooting 문제인가 싶어서 p_gain을 줄여봤지만 실패.
 		ocilation 문제인가 싶어서 d_gain을 키워봤다. 
@@ -71,7 +71,7 @@ accel, brake = 0 ~ 1
 				p_gain = 0.3
 				d_gain = 0.1
 	
-	# 2-2. lfd_gain 값 수정.
+	### 2-2. lfd_gain 값 수정.
 		
 		lfd 가 너무 작을 때, 진동하는 문제가 있음을 인지.
 		lfd_gain 을 2.0으로 키워서 lfd를 속도의 2배크기로 설정하였다. 
@@ -87,7 +87,7 @@ accel, brake = 0 ~ 1
 			self.lfd_gain = 1.0 # morive default 0.78
    
 
-	# 2-3. max_lfd 값 수정.
+	### 2-3. max_lfd 값 수정.
 		
 		lfd_gain 값을 수정하였으므로 max_lfd가 부족하지 않게 설정.
 		#lfd_gain 2.0, target_velocity = 40 에 맞게 설정.
