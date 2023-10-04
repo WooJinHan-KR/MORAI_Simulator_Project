@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 include morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_MoraiVehicleSpecSrv.dir/progress.make
 
 morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_MoraiVehicleSpecSrv:
-	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py morai_msgs /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiVehicleSpecSrv.srv morai_msgs/VehicleSpec:geometry_msgs/Vector3:morai_msgs/VehicleSpecIndex
+	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py morai_msgs /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiVehicleSpecSrv.srv geometry_msgs/Vector3:morai_msgs/VehicleSpecIndex:morai_msgs/VehicleSpec
 
 _morai_msgs_generate_messages_check_deps_MoraiVehicleSpecSrv: morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_MoraiVehicleSpecSrv
 _morai_msgs_generate_messages_check_deps_MoraiVehicleSpecSrv: morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_MoraiVehicleSpecSrv.dir/build.make

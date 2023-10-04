@@ -138,6 +138,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/ubuntu/morive_ws/build/map_loader/cmake_install.cmake")
   include("/home/ubuntu/morive_ws/build/object_detector/cmake_install.cmake")
   include("/home/ubuntu/morive_ws/build/planner/cmake_install.cmake")
+  include("/home/ubuntu/morive_ws/build/record/cmake_install.cmake")
   include("/home/ubuntu/morive_ws/build/state_estimator/cmake_install.cmake")
 
 endif()

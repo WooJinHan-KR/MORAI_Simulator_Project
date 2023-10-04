@@ -30,11 +30,13 @@ class latticePlanner:
 
             if self.is_path and self.is_status and self.is_obj:
                 if self.checkObject(self.local_path, self.object_data):
-                    lattice_path = self.latticePlanner(self.local_path, self.status_msg)
-                    lattice_path_index = self.collision_check(self.object_data, lattice_path)
+                    #lattice_path = self.latticePlanner(self.local_path, self.status_msg)
+                    #lattice_path = self.local_path
+                    #lattice_path_index = self.collision_check(self.object_data, lattice_path)
 
                     # (7)  lattice 경로 메세지 Publish
-                    self.lattice_path_pub.publish(lattice_path[lattice_path_index])
+                    #self.lattice_path_pub.publish(lattice_path[lattice_path_index])
+                    self.lattice_path_pub.publish(self.local_path)
                 else:
                     self.lattice_path_pub.publish(self.local_path)
             rate.sleep()
@@ -42,7 +44,7 @@ class latticePlanner:
     def checkObject(self, ref_path, object_data):
 
         is_crash = False
-        for obstacle in object_data.obstacle_list:
+        for obstacle in object_data.npc_list:
             for path in ref_path.poses:  
                 dis = sqrt(pow(path.pose.position.x - obstacle.position.x, 2) + pow(path.pose.position.y - obstacle.position.y, 2))                
                 if dis < 2.35: # 장애물의 좌표값이 지역 경로 상의 좌표값과의 직선거리가 2.35 미만일때 충돌이라 판단.
@@ -57,7 +59,7 @@ class latticePlanner:
         selected_lane = -1        
         lane_weight = [3, 2, 1, 1, 2, 3] #reference path 
         
-        for obstacle in object_data.obstacle_list:                        
+        for obstacle in object_data.npc_list:                        
             for path_num in range(len(out_path)) :                    
                 for path_pos in out_path[path_num].poses :                                
                     dis = sqrt(pow(obstacle.position.x - path_pos.pose.position.x, 2) + pow(obstacle.position.y - path_pos.pose.position.y, 2))

@@ -1,2 +1,2 @@
-interface:lateral_controller:longitudinal_controller:map_loader:morai_msgs:object_detector:planner:state_estimator
+interface:lateral_controller:longitudinal_controller:map_loader:morai_msgs:object_detector:planner:record:state_estimator
 -DCATKIN_DEVEL_PREFIX=/home/ubuntu/morive_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/morive_ws/install -G Unix Makefiles

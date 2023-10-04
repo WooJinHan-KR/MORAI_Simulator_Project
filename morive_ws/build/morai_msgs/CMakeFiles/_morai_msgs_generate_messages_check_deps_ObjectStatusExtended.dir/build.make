@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 include morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_ObjectStatusExtended.dir/progress.make
 
 morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_ObjectStatusExtended:
-	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py morai_msgs /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg geometry_msgs/Quaternion:geometry_msgs/Vector3
+	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py morai_msgs /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg geometry_msgs/Vector3:geometry_msgs/Quaternion
 
 _morai_msgs_generate_messages_check_deps_ObjectStatusExtended: morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_ObjectStatusExtended
 _morai_msgs_generate_messages_check_deps_ObjectStatusExtended: morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_ObjectStatusExtended.dir/build.make

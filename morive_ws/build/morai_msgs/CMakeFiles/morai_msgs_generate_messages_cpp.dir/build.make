@@ -178,16 +178,16 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusExtended.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusExtended.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusExtended.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusExtended.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusExtended.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusExtended.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from morai_msgs/ObjectStatusExtended.msg"
 	cd /home/ubuntu/morive_ws/src/morai_msgs && /home/ubuntu/morive_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/include/morai_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusListExtended.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusListExtended.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusListExtended.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusListExtended.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusListExtended.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusListExtended.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusListExtended.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusListExtended.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/ObjectStatusListExtended.h: /opt/ros/noetic/share/gencpp/msg.h.template
@@ -318,8 +318,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/EventInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/EventInfo.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/EventInfo.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/EventInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/EventInfo.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/Lamps.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/EventInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/EventInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating C++ code from morai_msgs/EventInfo.msg"
 	cd /home/ubuntu/morive_ws/src/morai_msgs && /home/ubuntu/morive_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/morive_ws/src/morai_msgs/msg/EventInfo.msg -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/include/morai_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -346,8 +346,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/NpcGhostCmd.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/NpcGhostCmd.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/NpcGhostCmd.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/NpcGhostCmd.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/NpcGhostInfo.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/NpcGhostCmd.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/NpcGhostCmd.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/NpcGhostInfo.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/NpcGhostCmd.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/NpcGhostCmd.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating C++ code from morai_msgs/NpcGhostCmd.msg"
@@ -393,9 +393,9 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/WaitForTickResponse.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/WaitForTickResponse.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/WaitForTickResponse.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/WaitForTickResponse.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/EgoVehicleStatus.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/WaitForTickResponse.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/WaitForTickResponse.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/WaitForTickResponse.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/WaitForTickResponse.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/EgoVehicleStatus.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/WaitForTickResponse.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Generating C++ code from morai_msgs/WaitForTickResponse.msg"
 	cd /home/ubuntu/morive_ws/src/morai_msgs && /home/ubuntu/morive_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/morive_ws/src/morai_msgs/msg/WaitForTickResponse.msg -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/include/morai_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -513,8 +513,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiScenarioLoadSrv.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiScenarioLoadSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiScenarioLoadSrv.srv
-/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiScenarioLoadSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/ScenarioLoad.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiScenarioLoadSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/MoraiSrvResponse.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiScenarioLoadSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/ScenarioLoad.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiScenarioLoadSrv.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiScenarioLoadSrv.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Generating C++ code from morai_msgs/MoraiScenarioLoadSrv.srv"
@@ -541,9 +541,9 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiEventCmdSrv.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiEventCmdSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiEventCmdSrv.srv
+/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiEventCmdSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/Lamps.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiEventCmdSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/EventInfo.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiEventCmdSrv.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiEventCmdSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/Lamps.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiEventCmdSrv.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiEventCmdSrv.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Generating C++ code from morai_msgs/MoraiEventCmdSrv.srv"
@@ -551,9 +551,9 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiVehicleSpecSrv.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiVehicleSpecSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiVehicleSpecSrv.srv
-/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiVehicleSpecSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/VehicleSpec.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiVehicleSpecSrv.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiVehicleSpecSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/VehicleSpecIndex.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiVehicleSpecSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/VehicleSpec.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiVehicleSpecSrv.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiVehicleSpecSrv.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Generating C++ code from morai_msgs/MoraiVehicleSpecSrv.srv"
@@ -561,8 +561,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeCmdSrv.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeCmdSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeCmdSrv.srv
-/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeCmdSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeCmdResponse.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeCmdSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeCmd.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeCmdSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeCmdResponse.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeCmdSrv.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeCmdSrv.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Generating C++ code from morai_msgs/MoraiSyncModeCmdSrv.srv"
@@ -570,10 +570,10 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiWaitForTickSrv.srv
+/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/EgoVehicleStatus.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/WaitForTick.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/WaitForTickResponse.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/EgoVehicleStatus.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiWaitForTickSrv.h: /opt/ros/noetic/share/gencpp/srv.h.template
@@ -611,8 +611,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeSLSrv.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeSLSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeSLSrv.srv
-/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeSLSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeScenarioLoad.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeSLSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeResultResponse.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeSLSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeScenarioLoad.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeSLSrv.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeSLSrv.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Generating C++ code from morai_msgs/MoraiSyncModeSLSrv.srv"
@@ -629,8 +629,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_cpp: /home/ubuntu/morive_ws/d
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeAddObjectSrv.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeAddObjectSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeAddObjectSrv.srv
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeAddObjectSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeAddObject.msg
-/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeAddObjectSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeResultResponse.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeAddObjectSrv.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeAddObjectSrv.h: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeResultResponse.msg
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeAddObjectSrv.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/morive_ws/devel/include/morai_msgs/MoraiSyncModeAddObjectSrv.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Generating C++ code from morai_msgs/MoraiSyncModeAddObjectSrv.srv"

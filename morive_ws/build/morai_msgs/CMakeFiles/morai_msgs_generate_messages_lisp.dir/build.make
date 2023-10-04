@@ -171,15 +171,15 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_lisp: /home/ubuntu/morive_ws/
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusExtended.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusExtended.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusExtended.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusExtended.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusExtended.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Lisp code from morai_msgs/ObjectStatusExtended.msg"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusListExtended.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusListExtended.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusListExtended.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusListExtended.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusListExtended.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusListExtended.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusExtended.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusListExtended.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/ObjectStatusListExtended.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Lisp code from morai_msgs/ObjectStatusListExtended.msg"
@@ -291,8 +291,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_lisp: /home/ubuntu/morive_ws/
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/EventInfo.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/EventInfo.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/EventInfo.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/EventInfo.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/EventInfo.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/Lamps.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/EventInfo.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating Lisp code from morai_msgs/EventInfo.msg"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/msg/EventInfo.msg -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg
 
@@ -315,8 +315,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_lisp: /home/ubuntu/morive_ws/
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/NpcGhostCmd.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/NpcGhostCmd.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/NpcGhostCmd.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/NpcGhostCmd.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/NpcGhostInfo.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/NpcGhostCmd.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/NpcGhostCmd.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/NpcGhostInfo.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/NpcGhostCmd.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating Lisp code from morai_msgs/NpcGhostCmd.msg"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/msg/NpcGhostCmd.msg -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg
@@ -356,9 +356,9 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_lisp: /home/ubuntu/morive_ws/
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/WaitForTickResponse.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/WaitForTickResponse.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/WaitForTickResponse.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/WaitForTickResponse.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/EgoVehicleStatus.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/WaitForTickResponse.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/WaitForTickResponse.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/WaitForTickResponse.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg/WaitForTickResponse.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/EgoVehicleStatus.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Generating Lisp code from morai_msgs/WaitForTickResponse.msg"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/msg/WaitForTickResponse.msg -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/msg
 
@@ -458,8 +458,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_lisp: /home/ubuntu/morive_ws/
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiScenarioLoadSrv.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiScenarioLoadSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiScenarioLoadSrv.srv
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiScenarioLoadSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/ScenarioLoad.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiScenarioLoadSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/MoraiSrvResponse.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiScenarioLoadSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/ScenarioLoad.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Generating Lisp code from morai_msgs/MoraiScenarioLoadSrv.srv"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiScenarioLoadSrv.srv -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv
 
@@ -480,33 +480,33 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_lisp: /home/ubuntu/morive_ws/
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiEventCmdSrv.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiEventCmdSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiEventCmdSrv.srv
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiEventCmdSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/Lamps.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiEventCmdSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/EventInfo.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiEventCmdSrv.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiEventCmdSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/Lamps.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Generating Lisp code from morai_msgs/MoraiEventCmdSrv.srv"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiEventCmdSrv.srv -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiVehicleSpecSrv.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiVehicleSpecSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiVehicleSpecSrv.srv
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiVehicleSpecSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/VehicleSpec.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiVehicleSpecSrv.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiVehicleSpecSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/VehicleSpecIndex.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiVehicleSpecSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/VehicleSpec.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Generating Lisp code from morai_msgs/MoraiVehicleSpecSrv.srv"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiVehicleSpecSrv.srv -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeCmdSrv.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeCmdSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeCmdSrv.srv
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeCmdSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeCmdResponse.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeCmdSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeCmd.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeCmdSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeCmdResponse.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Generating Lisp code from morai_msgs/MoraiSyncModeCmdSrv.srv"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeCmdSrv.srv -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiWaitForTickSrv.srv
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/EgoVehicleStatus.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/WaitForTick.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/WaitForTickResponse.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/EgoVehicleStatus.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiWaitForTickSrv.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Generating Lisp code from morai_msgs/MoraiWaitForTickSrv.srv"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiWaitForTickSrv.srv -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv
@@ -536,8 +536,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_lisp: /home/ubuntu/morive_ws/
 
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeSLSrv.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeSLSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeSLSrv.srv
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeSLSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeScenarioLoad.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeSLSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeResultResponse.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeSLSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeScenarioLoad.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Generating Lisp code from morai_msgs/MoraiSyncModeSLSrv.srv"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeSLSrv.srv -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv
 
@@ -550,8 +550,8 @@ morai_msgs/CMakeFiles/morai_msgs_generate_messages_lisp: /home/ubuntu/morive_ws/
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeAddObjectSrv.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeAddObjectSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeAddObjectSrv.srv
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeAddObjectSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeAddObject.msg
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeAddObjectSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeResultResponse.msg
 /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeAddObjectSrv.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv/MoraiSyncModeAddObjectSrv.lisp: /home/ubuntu/morive_ws/src/morai_msgs/msg/SyncModeResultResponse.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Generating Lisp code from morai_msgs/MoraiSyncModeAddObjectSrv.srv"
 	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeAddObjectSrv.srv -Imorai_msgs:/home/ubuntu/morive_ws/src/morai_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p morai_msgs -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/morai_msgs/srv
 
