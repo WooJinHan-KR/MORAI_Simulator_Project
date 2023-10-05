@@ -53,23 +53,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 # Include the progress variables for this target.
 include interface/CMakeFiles/interface_generate_messages_nodejs.dir/progress.make
 
-interface/CMakeFiles/interface_generate_messages_nodejs: /home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/msg/student.js
-interface/CMakeFiles/interface_generate_messages_nodejs: /home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/srv/AddTwoInts.js
-
-
-/home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/msg/student.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/msg/student.js: /home/ubuntu/morive_ws/src/interface/msg/student.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from interface/student.msg"
-	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/morive_ws/src/interface/msg/student.msg -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/msg
-
-/home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/srv/AddTwoInts.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/srv/AddTwoInts.js: /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from interface/AddTwoInts.srv"
-	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/srv
-
-interface_generate_messages_nodejs: interface/CMakeFiles/interface_generate_messages_nodejs
-interface_generate_messages_nodejs: /home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/msg/student.js
-interface_generate_messages_nodejs: /home/ubuntu/morive_ws/devel/share/gennodejs/ros/interface/srv/AddTwoInts.js
 interface_generate_messages_nodejs: interface/CMakeFiles/interface_generate_messages_nodejs.dir/build.make
 
 .PHONY : interface_generate_messages_nodejs

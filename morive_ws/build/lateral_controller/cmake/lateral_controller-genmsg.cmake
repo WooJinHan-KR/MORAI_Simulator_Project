@@ -1,8 +1,10 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "lateral_controller: 1 messages, 1 services")
+message(WARNING "Invoking generate_messages() without having added any message or service file before.
+You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
+message(STATUS "lateral_controller: 0 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ilateral_controller:/home/ubuntu/morive_ws/src/lateral_controller/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,36 +19,14 @@ add_custom_target(lateral_controller_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg" NAME_WE)
-add_custom_target(_lateral_controller_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lateral_controller" "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg" ""
-)
-
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv" NAME_WE)
-add_custom_target(_lateral_controller_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lateral_controller" "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv" ""
-)
-
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
-_generate_msg_cpp(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Services
-_generate_srv_cpp(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Module File
 _generate_module_cpp(lateral_controller
@@ -60,10 +40,6 @@ add_custom_target(lateral_controller_generate_messages_cpp
 add_dependencies(lateral_controller_generate_messages lateral_controller_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_cpp _lateral_controller_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_cpp _lateral_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(lateral_controller_gencpp)
@@ -74,20 +50,8 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lateral_controller_generate_message
 
 ### Section generating for lang: geneus
 ### Generating Messages
-_generate_msg_eus(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Services
-_generate_srv_eus(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Module File
 _generate_module_eus(lateral_controller
@@ -101,10 +65,6 @@ add_custom_target(lateral_controller_generate_messages_eus
 add_dependencies(lateral_controller_generate_messages lateral_controller_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_eus _lateral_controller_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_eus _lateral_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(lateral_controller_geneus)
@@ -115,20 +75,8 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lateral_controller_generate_message
 
 ### Section generating for lang: genlisp
 ### Generating Messages
-_generate_msg_lisp(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Services
-_generate_srv_lisp(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Module File
 _generate_module_lisp(lateral_controller
@@ -142,10 +90,6 @@ add_custom_target(lateral_controller_generate_messages_lisp
 add_dependencies(lateral_controller_generate_messages lateral_controller_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_lisp _lateral_controller_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_lisp _lateral_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(lateral_controller_genlisp)
@@ -156,20 +100,8 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lateral_controller_generate_message
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
-_generate_msg_nodejs(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Services
-_generate_srv_nodejs(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Module File
 _generate_module_nodejs(lateral_controller
@@ -183,10 +115,6 @@ add_custom_target(lateral_controller_generate_messages_nodejs
 add_dependencies(lateral_controller_generate_messages lateral_controller_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_nodejs _lateral_controller_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_nodejs _lateral_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(lateral_controller_gennodejs)
@@ -197,20 +125,8 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lateral_controller_generate_message
 
 ### Section generating for lang: genpy
 ### Generating Messages
-_generate_msg_py(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Services
-_generate_srv_py(lateral_controller
-  "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lateral_controller
-)
 
 ### Generating Module File
 _generate_module_py(lateral_controller
@@ -224,10 +140,6 @@ add_custom_target(lateral_controller_generate_messages_py
 add_dependencies(lateral_controller_generate_messages lateral_controller_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_py _lateral_controller_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv" NAME_WE)
-add_dependencies(lateral_controller_generate_messages_py _lateral_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(lateral_controller_genpy)

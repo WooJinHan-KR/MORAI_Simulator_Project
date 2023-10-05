@@ -53,26 +53,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 # Include the progress variables for this target.
 include interface/CMakeFiles/interface_generate_messages_cpp.dir/progress.make
 
-interface/CMakeFiles/interface_generate_messages_cpp: /home/ubuntu/morive_ws/devel/include/interface/student.h
-interface/CMakeFiles/interface_generate_messages_cpp: /home/ubuntu/morive_ws/devel/include/interface/AddTwoInts.h
-
-
-/home/ubuntu/morive_ws/devel/include/interface/student.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/morive_ws/devel/include/interface/student.h: /home/ubuntu/morive_ws/src/interface/msg/student.msg
-/home/ubuntu/morive_ws/devel/include/interface/student.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from interface/student.msg"
-	cd /home/ubuntu/morive_ws/src/interface && /home/ubuntu/morive_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/morive_ws/src/interface/msg/student.msg -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/include/interface -e /opt/ros/noetic/share/gencpp/cmake/..
-
-/home/ubuntu/morive_ws/devel/include/interface/AddTwoInts.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/morive_ws/devel/include/interface/AddTwoInts.h: /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv
-/home/ubuntu/morive_ws/devel/include/interface/AddTwoInts.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/ubuntu/morive_ws/devel/include/interface/AddTwoInts.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from interface/AddTwoInts.srv"
-	cd /home/ubuntu/morive_ws/src/interface && /home/ubuntu/morive_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/include/interface -e /opt/ros/noetic/share/gencpp/cmake/..
-
-interface_generate_messages_cpp: interface/CMakeFiles/interface_generate_messages_cpp
-interface_generate_messages_cpp: /home/ubuntu/morive_ws/devel/include/interface/student.h
-interface_generate_messages_cpp: /home/ubuntu/morive_ws/devel/include/interface/AddTwoInts.h
 interface_generate_messages_cpp: interface/CMakeFiles/interface_generate_messages_cpp.dir/build.make
 
 .PHONY : interface_generate_messages_cpp

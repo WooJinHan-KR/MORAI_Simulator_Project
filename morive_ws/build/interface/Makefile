@@ -92,6 +92,27 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -113,27 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -181,51 +181,6 @@ interface_generate_messages: interface/CMakeFiles/interface_generate_messages.di
 interface_generate_messages/fast:
 	cd /home/ubuntu/morive_ws/build && $(MAKE) -f interface/CMakeFiles/interface_generate_messages.dir/build.make interface/CMakeFiles/interface_generate_messages.dir/build
 .PHONY : interface_generate_messages/fast
-
-# Convenience name for target.
-interface/CMakeFiles/_interface_generate_messages_check_deps_student.dir/rule:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 interface/CMakeFiles/_interface_generate_messages_check_deps_student.dir/rule
-.PHONY : interface/CMakeFiles/_interface_generate_messages_check_deps_student.dir/rule
-
-# Convenience name for target.
-_interface_generate_messages_check_deps_student: interface/CMakeFiles/_interface_generate_messages_check_deps_student.dir/rule
-
-.PHONY : _interface_generate_messages_check_deps_student
-
-# fast build rule for target.
-_interface_generate_messages_check_deps_student/fast:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f interface/CMakeFiles/_interface_generate_messages_check_deps_student.dir/build.make interface/CMakeFiles/_interface_generate_messages_check_deps_student.dir/build
-.PHONY : _interface_generate_messages_check_deps_student/fast
-
-# Convenience name for target.
-interface/CMakeFiles/interface_genlisp.dir/rule:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 interface/CMakeFiles/interface_genlisp.dir/rule
-.PHONY : interface/CMakeFiles/interface_genlisp.dir/rule
-
-# Convenience name for target.
-interface_genlisp: interface/CMakeFiles/interface_genlisp.dir/rule
-
-.PHONY : interface_genlisp
-
-# fast build rule for target.
-interface_genlisp/fast:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f interface/CMakeFiles/interface_genlisp.dir/build.make interface/CMakeFiles/interface_genlisp.dir/build
-.PHONY : interface_genlisp/fast
-
-# Convenience name for target.
-interface/CMakeFiles/interface_generate_messages_py.dir/rule:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 interface/CMakeFiles/interface_generate_messages_py.dir/rule
-.PHONY : interface/CMakeFiles/interface_generate_messages_py.dir/rule
-
-# Convenience name for target.
-interface_generate_messages_py: interface/CMakeFiles/interface_generate_messages_py.dir/rule
-
-.PHONY : interface_generate_messages_py
-
-# fast build rule for target.
-interface_generate_messages_py/fast:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f interface/CMakeFiles/interface_generate_messages_py.dir/build.make interface/CMakeFiles/interface_generate_messages_py.dir/build
-.PHONY : interface_generate_messages_py/fast
 
 # Convenience name for target.
 interface/CMakeFiles/interface_generate_messages_cpp.dir/rule:
@@ -333,19 +288,19 @@ interface_genpy/fast:
 .PHONY : interface_genpy/fast
 
 # Convenience name for target.
-interface/CMakeFiles/_interface_generate_messages_check_deps_AddTwoInts.dir/rule:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 interface/CMakeFiles/_interface_generate_messages_check_deps_AddTwoInts.dir/rule
-.PHONY : interface/CMakeFiles/_interface_generate_messages_check_deps_AddTwoInts.dir/rule
+interface/CMakeFiles/interface_generate_messages_py.dir/rule:
+	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 interface/CMakeFiles/interface_generate_messages_py.dir/rule
+.PHONY : interface/CMakeFiles/interface_generate_messages_py.dir/rule
 
 # Convenience name for target.
-_interface_generate_messages_check_deps_AddTwoInts: interface/CMakeFiles/_interface_generate_messages_check_deps_AddTwoInts.dir/rule
+interface_generate_messages_py: interface/CMakeFiles/interface_generate_messages_py.dir/rule
 
-.PHONY : _interface_generate_messages_check_deps_AddTwoInts
+.PHONY : interface_generate_messages_py
 
 # fast build rule for target.
-_interface_generate_messages_check_deps_AddTwoInts/fast:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f interface/CMakeFiles/_interface_generate_messages_check_deps_AddTwoInts.dir/build.make interface/CMakeFiles/_interface_generate_messages_check_deps_AddTwoInts.dir/build
-.PHONY : _interface_generate_messages_check_deps_AddTwoInts/fast
+interface_generate_messages_py/fast:
+	cd /home/ubuntu/morive_ws/build && $(MAKE) -f interface/CMakeFiles/interface_generate_messages_py.dir/build.make interface/CMakeFiles/interface_generate_messages_py.dir/build
+.PHONY : interface_generate_messages_py/fast
 
 # Convenience name for target.
 interface/CMakeFiles/interface_gennodejs.dir/rule:
@@ -362,6 +317,21 @@ interface_gennodejs/fast:
 	cd /home/ubuntu/morive_ws/build && $(MAKE) -f interface/CMakeFiles/interface_gennodejs.dir/build.make interface/CMakeFiles/interface_gennodejs.dir/build
 .PHONY : interface_gennodejs/fast
 
+# Convenience name for target.
+interface/CMakeFiles/interface_genlisp.dir/rule:
+	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 interface/CMakeFiles/interface_genlisp.dir/rule
+.PHONY : interface/CMakeFiles/interface_genlisp.dir/rule
+
+# Convenience name for target.
+interface_genlisp: interface/CMakeFiles/interface_genlisp.dir/rule
+
+.PHONY : interface_genlisp
+
+# fast build rule for target.
+interface_genlisp/fast:
+	cd /home/ubuntu/morive_ws/build && $(MAKE) -f interface/CMakeFiles/interface_genlisp.dir/build.make interface/CMakeFiles/interface_genlisp.dir/build
+.PHONY : interface_genlisp/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -371,13 +341,7 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... interface_generate_messages"
-	@echo "... _interface_generate_messages_check_deps_student"
-	@echo "... test"
-	@echo "... interface_genlisp"
-	@echo "... interface_generate_messages_py"
 	@echo "... interface_generate_messages_cpp"
 	@echo "... interface_gencpp"
 	@echo "... interface_generate_messages_eus"
@@ -386,8 +350,12 @@ help:
 	@echo "... interface_generate_messages_nodejs"
 	@echo "... list_install_components"
 	@echo "... interface_genpy"
-	@echo "... _interface_generate_messages_check_deps_AddTwoInts"
+	@echo "... interface_generate_messages_py"
 	@echo "... interface_gennodejs"
+	@echo "... interface_genlisp"
+	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 .PHONY : help
 
 

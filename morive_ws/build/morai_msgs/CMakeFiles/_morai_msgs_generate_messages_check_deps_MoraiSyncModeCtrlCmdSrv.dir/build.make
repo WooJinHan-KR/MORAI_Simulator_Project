@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 include morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_MoraiSyncModeCtrlCmdSrv.dir/progress.make
 
 morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_MoraiSyncModeCtrlCmdSrv:
-	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py morai_msgs /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeCtrlCmdSrv.srv morai_msgs/CtrlCmd:morai_msgs/SyncModeResultResponse:morai_msgs/SyncModeCtrlCmd
+	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py morai_msgs /home/ubuntu/morive_ws/src/morai_msgs/srv/MoraiSyncModeCtrlCmdSrv.srv morai_msgs/CtrlCmd:morai_msgs/SyncModeCtrlCmd:morai_msgs/SyncModeResultResponse
 
 _morai_msgs_generate_messages_check_deps_MoraiSyncModeCtrlCmdSrv: morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_MoraiSyncModeCtrlCmdSrv
 _morai_msgs_generate_messages_check_deps_MoraiSyncModeCtrlCmdSrv: morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_MoraiSyncModeCtrlCmdSrv.dir/build.make

@@ -53,28 +53,14 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 # Include the progress variables for this target.
 include interface/CMakeFiles/interface_generate_messages_eus.dir/progress.make
 
-interface/CMakeFiles/interface_generate_messages_eus: /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/msg/student.l
-interface/CMakeFiles/interface_generate_messages_eus: /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/srv/AddTwoInts.l
 interface/CMakeFiles/interface_generate_messages_eus: /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/manifest.l
 
 
-/home/ubuntu/morive_ws/devel/share/roseus/ros/interface/msg/student.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/morive_ws/devel/share/roseus/ros/interface/msg/student.l: /home/ubuntu/morive_ws/src/interface/msg/student.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from interface/student.msg"
-	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/morive_ws/src/interface/msg/student.msg -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/msg
-
-/home/ubuntu/morive_ws/devel/share/roseus/ros/interface/srv/AddTwoInts.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/morive_ws/devel/share/roseus/ros/interface/srv/AddTwoInts.l: /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from interface/AddTwoInts.srv"
-	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/srv
-
 /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for interface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for interface"
 	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntu/morive_ws/devel/share/roseus/ros/interface interface std_msgs
 
 interface_generate_messages_eus: interface/CMakeFiles/interface_generate_messages_eus
-interface_generate_messages_eus: /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/msg/student.l
-interface_generate_messages_eus: /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/srv/AddTwoInts.l
 interface_generate_messages_eus: /home/ubuntu/morive_ws/devel/share/roseus/ros/interface/manifest.l
 interface_generate_messages_eus: interface/CMakeFiles/interface_generate_messages_eus.dir/build.make
 

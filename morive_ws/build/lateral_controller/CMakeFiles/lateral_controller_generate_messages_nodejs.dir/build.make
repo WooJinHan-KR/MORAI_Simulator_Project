@@ -53,23 +53,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 # Include the progress variables for this target.
 include lateral_controller/CMakeFiles/lateral_controller_generate_messages_nodejs.dir/progress.make
 
-lateral_controller/CMakeFiles/lateral_controller_generate_messages_nodejs: /home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/msg/student.js
-lateral_controller/CMakeFiles/lateral_controller_generate_messages_nodejs: /home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/srv/AddTwoInts.js
-
-
-/home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/msg/student.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/msg/student.js: /home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from lateral_controller/student.msg"
-	cd /home/ubuntu/morive_ws/build/lateral_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg -Ilateral_controller:/home/ubuntu/morive_ws/src/lateral_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p lateral_controller -o /home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/msg
-
-/home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/srv/AddTwoInts.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/srv/AddTwoInts.js: /home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from lateral_controller/AddTwoInts.srv"
-	cd /home/ubuntu/morive_ws/build/lateral_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv -Ilateral_controller:/home/ubuntu/morive_ws/src/lateral_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p lateral_controller -o /home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/srv
-
-lateral_controller_generate_messages_nodejs: lateral_controller/CMakeFiles/lateral_controller_generate_messages_nodejs
-lateral_controller_generate_messages_nodejs: /home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/msg/student.js
-lateral_controller_generate_messages_nodejs: /home/ubuntu/morive_ws/devel/share/gennodejs/ros/lateral_controller/srv/AddTwoInts.js
 lateral_controller_generate_messages_nodejs: lateral_controller/CMakeFiles/lateral_controller_generate_messages_nodejs.dir/build.make
 
 .PHONY : lateral_controller_generate_messages_nodejs

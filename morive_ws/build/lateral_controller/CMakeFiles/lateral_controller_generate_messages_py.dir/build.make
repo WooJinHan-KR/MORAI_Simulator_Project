@@ -53,37 +53,19 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 # Include the progress variables for this target.
 include lateral_controller/CMakeFiles/lateral_controller_generate_messages_py.dir/progress.make
 
-lateral_controller/CMakeFiles/lateral_controller_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/_student.py
-lateral_controller/CMakeFiles/lateral_controller_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/_AddTwoInts.py
 lateral_controller/CMakeFiles/lateral_controller_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/__init__.py
 lateral_controller/CMakeFiles/lateral_controller_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/__init__.py
 
 
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/_student.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/_student.py: /home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG lateral_controller/student"
-	cd /home/ubuntu/morive_ws/build/lateral_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg -Ilateral_controller:/home/ubuntu/morive_ws/src/lateral_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p lateral_controller -o /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg
-
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/_AddTwoInts.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/_AddTwoInts.py: /home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV lateral_controller/AddTwoInts"
-	cd /home/ubuntu/morive_ws/build/lateral_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv -Ilateral_controller:/home/ubuntu/morive_ws/src/lateral_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p lateral_controller -o /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv
-
 /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/__init__.py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/_student.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/__init__.py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/_AddTwoInts.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for lateral_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python msg __init__.py for lateral_controller"
 	cd /home/ubuntu/morive_ws/build/lateral_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg --initpy
 
 /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/__init__.py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/_student.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/__init__.py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/_AddTwoInts.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for lateral_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for lateral_controller"
 	cd /home/ubuntu/morive_ws/build/lateral_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv --initpy
 
 lateral_controller_generate_messages_py: lateral_controller/CMakeFiles/lateral_controller_generate_messages_py
-lateral_controller_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/_student.py
-lateral_controller_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/_AddTwoInts.py
 lateral_controller_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/__init__.py
 lateral_controller_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/__init__.py
 lateral_controller_generate_messages_py: lateral_controller/CMakeFiles/lateral_controller_generate_messages_py.dir/build.make

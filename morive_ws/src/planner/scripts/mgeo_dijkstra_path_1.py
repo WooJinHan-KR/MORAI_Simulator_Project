@@ -82,6 +82,8 @@ class dijkstra_path_pub :
                 read_pose = PoseStamped()
                 read_pose.pose.position.x = path_x
                 read_pose.pose.position.y = path_y
+                # if i >= 2 :
+                #     read_pose.pose.position.z = 1
                 read_pose.pose.orientation.w = 1
                 out_path.poses.append(read_pose)   
 

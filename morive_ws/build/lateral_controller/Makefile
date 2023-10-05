@@ -102,6 +102,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,21 +166,6 @@ preinstall/fast:
 depend:
 	cd /home/ubuntu/morive_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_student.dir/rule:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_student.dir/rule
-.PHONY : lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_student.dir/rule
-
-# Convenience name for target.
-_lateral_controller_generate_messages_check_deps_student: lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_student.dir/rule
-
-.PHONY : _lateral_controller_generate_messages_check_deps_student
-
-# fast build rule for target.
-_lateral_controller_generate_messages_check_deps_student/fast:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_student.dir/build.make lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_student.dir/build
-.PHONY : _lateral_controller_generate_messages_check_deps_student/fast
 
 # Convenience name for target.
 lateral_controller/CMakeFiles/lateral_controller_generate_messages_cpp.dir/rule:
@@ -303,21 +288,6 @@ lateral_controller_generate_messages_eus/fast:
 .PHONY : lateral_controller_generate_messages_eus/fast
 
 # Convenience name for target.
-lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_AddTwoInts.dir/rule:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_AddTwoInts.dir/rule
-.PHONY : lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_AddTwoInts.dir/rule
-
-# Convenience name for target.
-_lateral_controller_generate_messages_check_deps_AddTwoInts: lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_AddTwoInts.dir/rule
-
-.PHONY : _lateral_controller_generate_messages_check_deps_AddTwoInts
-
-# fast build rule for target.
-_lateral_controller_generate_messages_check_deps_AddTwoInts/fast:
-	cd /home/ubuntu/morive_ws/build && $(MAKE) -f lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_AddTwoInts.dir/build.make lateral_controller/CMakeFiles/_lateral_controller_generate_messages_check_deps_AddTwoInts.dir/build
-.PHONY : _lateral_controller_generate_messages_check_deps_AddTwoInts/fast
-
-# Convenience name for target.
 lateral_controller/CMakeFiles/lateral_controller_generate_messages_nodejs.dir/rule:
 	cd /home/ubuntu/morive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 lateral_controller/CMakeFiles/lateral_controller_generate_messages_nodejs.dir/rule
 .PHONY : lateral_controller/CMakeFiles/lateral_controller_generate_messages_nodejs.dir/rule
@@ -372,19 +342,17 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... _lateral_controller_generate_messages_check_deps_student"
 	@echo "... lateral_controller_generate_messages_cpp"
 	@echo "... lateral_controller_geneus"
 	@echo "... lateral_controller_generate_messages_lisp"
 	@echo "... lateral_controller_genlisp"
+	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... lateral_controller_generate_messages_py"
 	@echo "... lateral_controller_generate_messages"
 	@echo "... lateral_controller_gencpp"
 	@echo "... lateral_controller_generate_messages_eus"
-	@echo "... _lateral_controller_generate_messages_check_deps_AddTwoInts"
 	@echo "... lateral_controller_generate_messages_nodejs"
 	@echo "... lateral_controller_gennodejs"
 	@echo "... lateral_controller_genpy"

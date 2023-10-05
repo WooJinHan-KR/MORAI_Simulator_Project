@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   "/home/ubuntu/morive_ws/devel/share/roseus/ros/interface/manifest.l"
-  "/home/ubuntu/morive_ws/devel/share/roseus/ros/interface/msg/student.l"
-  "/home/ubuntu/morive_ws/devel/share/roseus/ros/interface/srv/AddTwoInts.l"
   "CMakeFiles/interface_generate_messages_eus"
 )
 

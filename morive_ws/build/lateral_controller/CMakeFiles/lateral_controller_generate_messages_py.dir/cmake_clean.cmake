@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   "/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/__init__.py"
-  "/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/msg/_student.py"
-  "/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/_AddTwoInts.py"
   "/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/lateral_controller/srv/__init__.py"
   "CMakeFiles/lateral_controller_generate_messages_py"
 )

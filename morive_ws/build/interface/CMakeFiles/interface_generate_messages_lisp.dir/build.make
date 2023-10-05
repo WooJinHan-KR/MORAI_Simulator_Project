@@ -53,23 +53,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 # Include the progress variables for this target.
 include interface/CMakeFiles/interface_generate_messages_lisp.dir/progress.make
 
-interface/CMakeFiles/interface_generate_messages_lisp: /home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/msg/student.lisp
-interface/CMakeFiles/interface_generate_messages_lisp: /home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/srv/AddTwoInts.lisp
-
-
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/msg/student.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/msg/student.lisp: /home/ubuntu/morive_ws/src/interface/msg/student.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from interface/student.msg"
-	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/interface/msg/student.msg -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/msg
-
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/srv/AddTwoInts.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/srv/AddTwoInts.lisp: /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from interface/AddTwoInts.srv"
-	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/srv
-
-interface_generate_messages_lisp: interface/CMakeFiles/interface_generate_messages_lisp
-interface_generate_messages_lisp: /home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/msg/student.lisp
-interface_generate_messages_lisp: /home/ubuntu/morive_ws/devel/share/common-lisp/ros/interface/srv/AddTwoInts.lisp
 interface_generate_messages_lisp: interface/CMakeFiles/interface_generate_messages_lisp.dir/build.make
 
 .PHONY : interface_generate_messages_lisp

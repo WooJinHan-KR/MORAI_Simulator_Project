@@ -3,6 +3,6 @@ prefix=/home/ubuntu/morive_ws/devel
 Name: interface
 Description: Description of interface
 Version: 0.0.0
-Cflags: -I/home/ubuntu/morive_ws/devel/include
+Cflags: 
 Libs: -L${prefix}/lib 
 Requires: message_runtime

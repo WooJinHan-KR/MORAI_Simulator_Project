@@ -38,14 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lateral_controller/msg" TYPE FILE FILES "/home/ubuntu/morive_ws/src/lateral_controller/msg/student.msg")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lateral_controller/srv" TYPE FILE FILES "/home/ubuntu/morive_ws/src/lateral_controller/srv/AddTwoInts.srv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lateral_controller/cmake" TYPE FILE FILES "/home/ubuntu/morive_ws/build/lateral_controller/catkin_generated/installspace/lateral_controller-msg-paths.cmake")
 endif()
 

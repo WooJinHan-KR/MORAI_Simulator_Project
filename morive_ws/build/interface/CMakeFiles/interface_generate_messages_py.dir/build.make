@@ -53,37 +53,19 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 # Include the progress variables for this target.
 include interface/CMakeFiles/interface_generate_messages_py.dir/progress.make
 
-interface/CMakeFiles/interface_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/_student.py
-interface/CMakeFiles/interface_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/_AddTwoInts.py
 interface/CMakeFiles/interface_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/__init__.py
 interface/CMakeFiles/interface_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/__init__.py
 
 
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/_student.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/_student.py: /home/ubuntu/morive_ws/src/interface/msg/student.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG interface/student"
-	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/morive_ws/src/interface/msg/student.msg -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg
-
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/_AddTwoInts.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/_AddTwoInts.py: /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV interface/AddTwoInts"
-	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/morive_ws/src/interface/srv/AddTwoInts.srv -Iinterface:/home/ubuntu/morive_ws/src/interface/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interface -o /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv
-
 /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/__init__.py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/_student.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/__init__.py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/_AddTwoInts.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for interface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python msg __init__.py for interface"
 	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg --initpy
 
 /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/__init__.py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/_student.py
-/home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/__init__.py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/_AddTwoInts.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for interface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/morive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for interface"
 	cd /home/ubuntu/morive_ws/build/interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv --initpy
 
 interface_generate_messages_py: interface/CMakeFiles/interface_generate_messages_py
-interface_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/_student.py
-interface_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/_AddTwoInts.py
 interface_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/msg/__init__.py
 interface_generate_messages_py: /home/ubuntu/morive_ws/devel/lib/python3/dist-packages/interface/srv/__init__.py
 interface_generate_messages_py: interface/CMakeFiles/interface_generate_messages_py.dir/build.make
