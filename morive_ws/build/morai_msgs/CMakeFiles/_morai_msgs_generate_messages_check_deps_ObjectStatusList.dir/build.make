@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/morive_ws/build
 include morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_ObjectStatusList.dir/progress.make
 
 morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_ObjectStatusList:
-	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py morai_msgs /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusList.msg morai_msgs/ObjectStatus:geometry_msgs/Vector3:std_msgs/Header
+	cd /home/ubuntu/morive_ws/build/morai_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py morai_msgs /home/ubuntu/morive_ws/src/morai_msgs/msg/ObjectStatusList.msg std_msgs/Header:geometry_msgs/Vector3:morai_msgs/ObjectStatus
 
 _morai_msgs_generate_messages_check_deps_ObjectStatusList: morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_ObjectStatusList
 _morai_msgs_generate_messages_check_deps_ObjectStatusList: morai_msgs/CMakeFiles/_morai_msgs_generate_messages_check_deps_ObjectStatusList.dir/build.make

@@ -11,9 +11,6 @@ from geometry_msgs.msg import Point
 from nav_msgs.msg import Odometry, Path
 from morai_msgs.msg import CtrlCmd, EgoVehicleStatus, ObjectStatusList
 
-import warnings
-warnings.filterwarnings("ignore")
-
 
 # advanced_purepursuit 은 차량의 차량의 종 횡 방향 제어 예제입니다.
 # Purpusuit 알고리즘의 Look Ahead Distance 값을 속도에 비례하여 가변 값으로 만들어 횡 방향 주행 성능을 올립니다.
@@ -30,6 +27,21 @@ warnings.filterwarnings("ignore")
 # 6. 도로의 곡률 계산
 # 7. 곡률 기반 속도 계획
 # 8. 제어입력 메세지 Publish
+
+class park:
+    def __init__(self):
+        rospy.init_node('park', anonymous=True)
+
+        # TODO: (1) subscriber, publisher 선언
+
+        self.ctrl_cmd_pub = rospy.Publisher('ctrl_cmd', CtrlCmd, queue_size=1)
+        self.ctrl_cmd_msg = CtrlCmd()
+        self.ctrl_cmd_msg.longlCmdType = 1
+
+        while True:
+            self.ctrl_cmd_msg.brake = 1.0
+            self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
+
 
 class pure_pursuit:
     def __init__(self):
@@ -58,7 +70,7 @@ class pure_pursuit:
         self.current_postion = Point()
 
         self.vehicle_length = 4.355  # morive kia niro (hev)
-        self.wheel_length = 3.5 
+        self.wheel_length = 3.5
         self.lfd = 3
         self.min_lfd = 5
         self.max_lfd = 80  # morive default 30
@@ -92,31 +104,161 @@ class pure_pursuit:
 
                 output = self.pid.pid(self.target_velocity, self.status_msg.velocity.x * 3.6)
 
-                front_x=self.status_msg.position.x+(self.wheel_length*np.cos(np.radians(self.status_msg.heading)))
-                front_y=self.status_msg.position.y+(self.wheel_length*np.sin(np.radians(self.status_msg.heading)))
+                # heading, nearest
+                dis_list = []
+                for object in self.object_msg.npc_list:
+                    dis_list.append(sqrt(pow(self.status_msg.position.x - object.position.x, 2) +
+                                         pow(self.status_msg.position.y - object.position.y, 2)))
+                nearest_dis = min(dis_list)
+                nearest_index = dis_list.index(nearest_dis)
+                heading_difference = abs(self.object_msg.npc_list[nearest_index].heading - self.status_msg.heading)
 
-                if any(sqrt(pow(front_x - object.position.x, 2) + 
-                            pow(front_y - object.position.y, 2)) < 4.0
-                            for object in self.object_msg.npc_list):
+                #(x,y)case
+                #line change
+                if (self.status_msg.position.x > 160.0 and self.status_msg.position.x < 230.0 
+                    and self.status_msg.position.y > 1020.0 and self.status_msg.position.y <1780.0 ):
                     
-                    self.ctrl_cmd_msg.accel = 0.0
-                    self.ctrl_cmd_msg.brake = 1.0
-                    
-                    print("brake")
-                    print("brake")
-                    print("brake")
-                    print("brake")
-                    print("brake")
-                    print("brake")
-                    print("brake")
-                    print("brake")
-                    print("brake")
-                    print("brake")
-                    
-                
-                else:
+                    print('case 2')
+                    print('case 2')
+                    print('case 2')
+                    print('case 2')
+                    print('case 2')
+                    print('case 2')
+                    print('case 2')
+                    print('case 2')
+
+                    # same heading degree
+                    if heading_difference > 1.0:
+                        if nearest_dis < 5.0:
+                            self.ctrl_cmd_msg.accel = 0.0
+                            self.ctrl_cmd_msg.brake = 1.0
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+                            print('brake')
+
+                        else:
+                            if output > 0.0:
+                                self.ctrl_cmd_msg.accel = output
+                                self.ctrl_cmd_msg.brake = 0.0
+
+                            # morive brake tunning
+                            elif -0.5 < output <= 0.0:
+                                self.ctrl_cmd_msg.accel = 0.0
+                                self.ctrl_cmd_msg.brake = 0.0
+
+                            else:
+                                self.ctrl_cmd_msg.accel = 0.0
+                                self.ctrl_cmd_msg.brake = -output
+                    else:
+                        if output > 0.0:
+                            self.ctrl_cmd_msg.accel = output
+                            self.ctrl_cmd_msg.brake = 0.0
+
+                        # morive brake tunning
+                        elif -0.5 < output <= 0.0:
+                            self.ctrl_cmd_msg.accel = 0.0
+                            self.ctrl_cmd_msg.brake = 0.0
+
+                        else:
+                            self.ctrl_cmd_msg.accel = 0.0
+                            self.ctrl_cmd_msg.brake = -output
+                #before circle
+                elif (self.status_msg.position.x > -22.0 and self.status_msg.position.x < 57.0
+                    and self.status_msg.position.y > 960.0 and self.status_msg.position.y <990.0):
+
+                    print('case 3-1')
+                    print('case 3-1')
+                    print('case 3-1')
+                    print('case 3-1')
+                    print('case 3-1')
+                    print('case 3-1')
+
                     if output > 0.0:
-                        self.ctrl_cmd_msg.accel = output
+                        self.ctrl_cmd_msg.accel = output/15.0
+                        self.ctrl_cmd_msg.brake = 0.0
+
+                    else:
+                        self.ctrl_cmd_msg.accel = 0.0
+                        self.ctrl_cmd_msg.brake = -output
+
+                #circle
+                elif (self.status_msg.position.x > -27.0 and self.status_msg.position.x < -14.0
+                    and self.status_msg.position.y > 800.0 and self.status_msg.position.y <1030.0):
+
+
+                    print('case 3')
+                    print('case 3')
+                    print('case 3')
+                    print('case 3')
+                    print('case 3')
+                    print('case 3')
+                    print('case 3')
+                    print('case 3')
+
+                    if nearest_dis > 14.0:
+                        if output > 0.0:
+                            self.ctrl_cmd_msg.accel = output/15.0
+                            self.ctrl_cmd_msg.brake = 0.0
+
+                        else:
+                            self.ctrl_cmd_msg.accel = 0.0
+                            self.ctrl_cmd_msg.brake = -output
+                        print('brake')
+                        print('brake')
+                        print('brake')
+                        print('nearest_dis',nearest_dis)
+                        print('nearest_dis',nearest_dis)
+                        print('nearest_dis',nearest_dis)
+
+                    elif nearest_dis > 7.0:
+
+                        self.ctrl_cmd_msg.accel = 0.0
+                        self.ctrl_cmd_msg.brake = 1.0
+
+                        print('brake')
+                        print('brake')
+                        print('brake')
+                        print('nearest_dis',nearest_dis)
+                        print('nearest_dis',nearest_dis)
+                        print('nearest_dis',nearest_dis)
+
+
+                    else:
+                        if output > 0.0:
+                            self.ctrl_cmd_msg.accel = output/15.0
+                            self.ctrl_cmd_msg.brake = 0.0
+
+                        else:
+                            self.ctrl_cmd_msg.accel = 0.0
+                            self.ctrl_cmd_msg.brake = -output
+
+                #before parking
+                elif (self.status_msg.position.x > -24.0 and self.status_msg.position.x < 4.0
+                    and self.status_msg.position.y > 1020.0 and self.status_msg.position.y <1075.0):
+
+                    print('case 4')
+                    print('case 4')
+                    print('case 4')
+                    print('case 4')
+                    print('case 4')
+                    print('case 4')
+                    print('case 4')
+                    print('case 4')
+
+
+                    if output > 0.0:
+                        self.ctrl_cmd_msg.accel = output/35.0
                         self.ctrl_cmd_msg.brake = 0.0
 
                     # morive brake tunning
@@ -128,10 +270,95 @@ class pure_pursuit:
                         self.ctrl_cmd_msg.accel = 0.0
                         self.ctrl_cmd_msg.brake = -output
 
-                # TODO: (8) 제어입력 메세지 Publish
-                # print('ctrl_cmd_accel:', self.ctrl_cmd_msg.accel)
-                # print('ctrl_cmd_brake:', self.ctrl_cmd_msg.brake)
-                # print('output:', output)
+
+                #parking
+                elif (self.status_msg.position.x > -15.0 and self.status_msg.position.x < 45.0
+                    and self.status_msg.position.y > 1010.0 and self.status_msg.position.y <1075.0):
+                    
+
+                    print('case 5')
+                    print('case 5')
+                    print('case 5')
+                    print('case 5')
+
+                    print('steering', steering)
+                    print('steering', steering)
+                    print('steering', steering)
+                    print('steering', steering)
+                    print('steering', steering)
+
+                    if output > 0.0:
+                        self.ctrl_cmd_msg.accel = output/40.0                     
+                        self.ctrl_cmd_msg.brake = 0.0
+
+                    else:
+                        self.ctrl_cmd_msg.accel = 0.0
+                        self.ctrl_cmd_msg.brake = -output
+                
+                else:
+                    print('case 1')
+                    print('case 1')
+                    print('case 1')
+                    print('case 1')
+                    print('case 1')
+                    print('case 1')
+                    print('case 1')
+                    print('case 1')
+
+                    if output > 0.0:
+                            self.ctrl_cmd_msg.accel = output
+                            self.ctrl_cmd_msg.brake = 0.0
+
+                    # morive brake tunning
+                    elif -0.5 < output <= 0.0:
+                        self.ctrl_cmd_msg.accel = 0.0
+                        self.ctrl_cmd_msg.brake = 0.0
+
+                    else:
+                        self.ctrl_cmd_msg.accel = 0.0
+                        self.ctrl_cmd_msg.brake = -output
+
+
+                # # same heading degree
+                # if heading_difference > 5.0:
+                #     if nearest_dis < 10.0:
+                #         self.ctrl_cmd_msg.accel = 0.0
+                #         self.ctrl_cmd_msg.brake = 1.0
+
+                #     else:
+                #         if output > 0.0:
+                #             self.ctrl_cmd_msg.accel = output
+                #             self.ctrl_cmd_msg.brake = 0.0
+
+                #         # morive brake tunning
+                #         elif -0.5 < output <= 0.0:
+                #             self.ctrl_cmd_msg.accel = 0.0
+                #             self.ctrl_cmd_msg.brake = 0.0
+
+                #         else:
+                #             self.ctrl_cmd_msg.accel = 0.0
+                #             self.ctrl_cmd_msg.brake = -output
+                # else:
+                #     if output > 0.0:
+                #         self.ctrl_cmd_msg.accel = output
+                #         self.ctrl_cmd_msg.brake = 0.0
+
+                #     # morive brake tunning
+                #     elif -0.5 < output <= 0.0:
+                #         self.ctrl_cmd_msg.accel = 0.0
+                #         self.ctrl_cmd_msg.brake = 0.0
+
+                #     else:
+                #         self.ctrl_cmd_msg.accel = 0.0
+                #         self.ctrl_cmd_msg.brake = -output
+                speeds = sqrt(pow(self.status_msg.velocity.x,2)+pow(self.status_msg.velocity.y,2))
+                print('speed', speeds)
+                print('speed', speeds)
+                print('speed', speeds)
+                print('speed', speeds)
+                print('speed', speeds)
+                print('speed', speeds)
+
                 self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
 
             rate.sleep()
@@ -213,7 +440,7 @@ class pure_pursuit:
         # TODO: (4) Steering 각도 계산
         theta = atan2(local_path_point[1], local_path_point[0])
         steering = atan2((2 * self.vehicle_length * sin(theta)), self.lfd)
-
+        
         return steering
 
 
@@ -290,5 +517,7 @@ class velocityPlanning:
 if __name__ == '__main__':
     try:
         test_track = pure_pursuit()
+        test_park = park()
+
     except rospy.ROSInterruptException:
         pass
