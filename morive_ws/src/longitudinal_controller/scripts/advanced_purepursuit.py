@@ -100,7 +100,7 @@ class pure_pursuit:
                     self.ctrl_cmd_msg.steering = steering
                 else:
                     rospy.loginfo("no found forward point")
-                    self.ctrl_cmd_msg.steering = 0.0
+                    self.ctrl_cmd_msg.steering = steering #0.0 last
 
                 output = self.pid.pid(self.target_velocity, self.status_msg.velocity.x * 3.6)
 
@@ -221,7 +221,7 @@ class pure_pursuit:
                         print('nearest_dis',nearest_dis)
                         print('nearest_dis',nearest_dis)
 
-                    elif nearest_dis > 7.0:
+                    elif nearest_dis > 8.0:
 
                         self.ctrl_cmd_msg.accel = 0.0
                         self.ctrl_cmd_msg.brake = 1.0
@@ -258,12 +258,7 @@ class pure_pursuit:
 
 
                     if output > 0.0:
-                        self.ctrl_cmd_msg.accel = output/35.0
-                        self.ctrl_cmd_msg.brake = 0.0
-
-                    # morive brake tunning
-                    elif -0.5 < output <= 0.0:
-                        self.ctrl_cmd_msg.accel = 0.0
+                        self.ctrl_cmd_msg.accel = output/50.0
                         self.ctrl_cmd_msg.brake = 0.0
 
                     else:
@@ -288,7 +283,7 @@ class pure_pursuit:
                     print('steering', steering)
 
                     if output > 0.0:
-                        self.ctrl_cmd_msg.accel = output/40.0                     
+                        self.ctrl_cmd_msg.accel = output/60.0                   
                         self.ctrl_cmd_msg.brake = 0.0
 
                     else:
@@ -318,39 +313,6 @@ class pure_pursuit:
                         self.ctrl_cmd_msg.accel = 0.0
                         self.ctrl_cmd_msg.brake = -output
 
-
-                # # same heading degree
-                # if heading_difference > 5.0:
-                #     if nearest_dis < 10.0:
-                #         self.ctrl_cmd_msg.accel = 0.0
-                #         self.ctrl_cmd_msg.brake = 1.0
-
-                #     else:
-                #         if output > 0.0:
-                #             self.ctrl_cmd_msg.accel = output
-                #             self.ctrl_cmd_msg.brake = 0.0
-
-                #         # morive brake tunning
-                #         elif -0.5 < output <= 0.0:
-                #             self.ctrl_cmd_msg.accel = 0.0
-                #             self.ctrl_cmd_msg.brake = 0.0
-
-                #         else:
-                #             self.ctrl_cmd_msg.accel = 0.0
-                #             self.ctrl_cmd_msg.brake = -output
-                # else:
-                #     if output > 0.0:
-                #         self.ctrl_cmd_msg.accel = output
-                #         self.ctrl_cmd_msg.brake = 0.0
-
-                #     # morive brake tunning
-                #     elif -0.5 < output <= 0.0:
-                #         self.ctrl_cmd_msg.accel = 0.0
-                #         self.ctrl_cmd_msg.brake = 0.0
-
-                #     else:
-                #         self.ctrl_cmd_msg.accel = 0.0
-                #         self.ctrl_cmd_msg.brake = -output
                 speeds = sqrt(pow(self.status_msg.velocity.x,2)+pow(self.status_msg.velocity.y,2))
                 print('speed', speeds)
                 print('speed', speeds)
