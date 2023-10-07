@@ -9,8 +9,8 @@ from tf.transformations import euler_from_quaternion
 
 from geometry_msgs.msg import Point
 from nav_msgs.msg import Odometry, Path
-from morai_msgs.msg import CtrlCmd, EgoVehicleStatus, ObjectStatusList
-
+from morai_msgs.msg import CtrlCmd, EgoVehicleStatus, ObjectStatusList, EventInfo
+from morai_msgs.srv import MoraiEventCmdSrv
 
 # advanced_purepursuit 은 차량의 차량의 종 횡 방향 제어 예제입니다.
 # Purpusuit 알고리즘의 Look Ahead Distance 값을 속도에 비례하여 가변 값으로 만들어 횡 방향 주행 성능을 올립니다.
@@ -31,16 +31,32 @@ from morai_msgs.msg import CtrlCmd, EgoVehicleStatus, ObjectStatusList
 class park:
     def __init__(self):
         rospy.init_node('park', anonymous=True)
-
-        # TODO: (1) subscriber, publisher 선언
-
         self.ctrl_cmd_pub = rospy.Publisher('ctrl_cmd', CtrlCmd, queue_size=1)
+
+    def ctrl_pub(self, accel_value, brake_value):
+
         self.ctrl_cmd_msg = CtrlCmd()
         self.ctrl_cmd_msg.longlCmdType = 1
 
-        while True:
-            self.ctrl_cmd_msg.brake = 1.0
-            self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
+        self.ctrl_cmd_msg.accel = accel_value
+        self.ctrl_cmd_msg.brake = brake_value
+
+        rospy.sleep(0.1)
+        self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
+
+    
+    def call_service(self, gear_value):
+        rospy.wait_for_service('Service_MoraiEventCmd')
+        try:
+            service_client = rospy.ServiceProxy('Service_MoraiEventCmd', MoraiEventCmdSrv)
+            request_data = EventInfo()
+            request_data.gear = gear_value  # P 기어로 설정
+            response = service_client(request_data)
+            return response
+        
+        except rospy.ServiceException as e:
+            print("Service call failed: %s" % e)
+            return None
 
 
 class pure_pursuit:
@@ -84,7 +100,8 @@ class pure_pursuit:
                 self.velocity_list = self.vel_planning.curvedBaseVelocity(self.global_path, 50)
                 break
             else:
-                rospy.loginfo('Waiting global path data')
+                pass
+                #rospy.loginfo('Waiting global path data')
 
         rate = rospy.Rate(30)  # 30hz
         while not rospy.is_shutdown():
@@ -99,7 +116,7 @@ class pure_pursuit:
                 if self.is_look_forward_point:
                     self.ctrl_cmd_msg.steering = steering
                 else:
-                    rospy.loginfo("no found forward point")
+                    #rospy.loginfo("no found forward point")
                     self.ctrl_cmd_msg.steering = steering #0.0 last
 
                 output = self.pid.pid(self.target_velocity, self.status_msg.velocity.x * 3.6)
@@ -119,42 +136,20 @@ class pure_pursuit:
                     and self.status_msg.position.y > 1020.0 and self.status_msg.position.y <1780.0 ):
                     
                     print('case 2')
-                    print('case 2')
-                    print('case 2')
-                    print('case 2')
-                    print('case 2')
-                    print('case 2')
-                    print('case 2')
-                    print('case 2')
+
 
                     # same heading degree
                     if heading_difference > 1.0:
                         if nearest_dis < 5.0:
                             self.ctrl_cmd_msg.accel = 0.0
                             self.ctrl_cmd_msg.brake = 1.0
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
-                            print('brake')
+
+                            print('#############brake##############')
+
 
                         else:
                             if output > 0.0:
                                 self.ctrl_cmd_msg.accel = output
-                                self.ctrl_cmd_msg.brake = 0.0
-
-                            # morive brake tunning
-                            elif -0.5 < output <= 0.0:
-                                self.ctrl_cmd_msg.accel = 0.0
                                 self.ctrl_cmd_msg.brake = 0.0
 
                             else:
@@ -174,15 +169,11 @@ class pure_pursuit:
                             self.ctrl_cmd_msg.accel = 0.0
                             self.ctrl_cmd_msg.brake = -output
                 #before circle
-                elif (self.status_msg.position.x > -22.0 and self.status_msg.position.x < 57.0
-                    and self.status_msg.position.y > 960.0 and self.status_msg.position.y <990.0):
+                elif (self.status_msg.position.x > -14.0 and self.status_msg.position.x < 40.0
+                    and self.status_msg.position.y > 960.0 and self.status_msg.position.y <1020.0):
 
                     print('case 3-1')
-                    print('case 3-1')
-                    print('case 3-1')
-                    print('case 3-1')
-                    print('case 3-1')
-                    print('case 3-1')
+
 
                     if output > 0.0:
                         self.ctrl_cmd_msg.accel = output/15.0
@@ -193,18 +184,12 @@ class pure_pursuit:
                         self.ctrl_cmd_msg.brake = -output
 
                 #circle
-                elif (self.status_msg.position.x > -27.0 and self.status_msg.position.x < -14.0
-                    and self.status_msg.position.y > 800.0 and self.status_msg.position.y <1030.0):
+                elif (self.status_msg.position.x > -28.0 and self.status_msg.position.x < -14.0
+                    and self.status_msg.position.y > 990.0 and self.status_msg.position.y <1030.0):
 
 
                     print('case 3')
-                    print('case 3')
-                    print('case 3')
-                    print('case 3')
-                    print('case 3')
-                    print('case 3')
-                    print('case 3')
-                    print('case 3')
+
 
                     if nearest_dis > 14.0:
                         if output > 0.0:
@@ -214,11 +199,7 @@ class pure_pursuit:
                         else:
                             self.ctrl_cmd_msg.accel = 0.0
                             self.ctrl_cmd_msg.brake = -output
-                        print('brake')
-                        print('brake')
-                        print('brake')
-                        print('nearest_dis',nearest_dis)
-                        print('nearest_dis',nearest_dis)
+                        print('#############brake##############')
                         print('nearest_dis',nearest_dis)
 
                     elif nearest_dis > 8.0:
@@ -226,11 +207,7 @@ class pure_pursuit:
                         self.ctrl_cmd_msg.accel = 0.0
                         self.ctrl_cmd_msg.brake = 1.0
 
-                        print('brake')
-                        print('brake')
-                        print('brake')
-                        print('nearest_dis',nearest_dis)
-                        print('nearest_dis',nearest_dis)
+                        print('#############brake##############')
                         print('nearest_dis',nearest_dis)
 
 
@@ -248,14 +225,6 @@ class pure_pursuit:
                     and self.status_msg.position.y > 1020.0 and self.status_msg.position.y <1075.0):
 
                     print('case 4')
-                    print('case 4')
-                    print('case 4')
-                    print('case 4')
-                    print('case 4')
-                    print('case 4')
-                    print('case 4')
-                    print('case 4')
-
 
                     if output > 0.0:
                         self.ctrl_cmd_msg.accel = output/50.0
@@ -272,15 +241,7 @@ class pure_pursuit:
                     
 
                     print('case 5')
-                    print('case 5')
-                    print('case 5')
-                    print('case 5')
 
-                    print('steering', steering)
-                    print('steering', steering)
-                    print('steering', steering)
-                    print('steering', steering)
-                    print('steering', steering)
 
                     if output > 0.0:
                         self.ctrl_cmd_msg.accel = output/60.0                   
@@ -291,13 +252,6 @@ class pure_pursuit:
                         self.ctrl_cmd_msg.brake = -output
                 
                 else:
-                    print('case 1')
-                    print('case 1')
-                    print('case 1')
-                    print('case 1')
-                    print('case 1')
-                    print('case 1')
-                    print('case 1')
                     print('case 1')
 
                     if output > 0.0:
@@ -314,12 +268,7 @@ class pure_pursuit:
                         self.ctrl_cmd_msg.brake = -output
 
                 speeds = sqrt(pow(self.status_msg.velocity.x,2)+pow(self.status_msg.velocity.y,2))
-                print('speed', speeds)
-                print('speed', speeds)
-                print('speed', speeds)
-                print('speed', speeds)
-                print('speed', speeds)
-                print('speed', speeds)
+                # print('speed', speeds)
 
                 self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
 
@@ -371,7 +320,7 @@ class pure_pursuit:
             self.lfd = self.min_lfd
         elif self.lfd > self.max_lfd:
             self.lfd = self.max_lfd
-        rospy.loginfo(self.lfd)
+        #rospy.loginfo(self.lfd)
 
         vehicle_position = self.current_postion
         self.is_look_forward_point = False
@@ -480,6 +429,23 @@ if __name__ == '__main__':
     try:
         test_track = pure_pursuit()
         test_park = park()
+
+        test_park.ctrl_pub(0.0,1.0)
+        time.sleep(2)
+
+        # R
+        response = test_park.call_service(2)
+        if response:
+            print("Gear:", response.gear)
+
+        test_park.ctrl_pub(1.0,0.0)
+        time.sleep(2)
+
+        # p
+        response = test_park.call_service(1)
+        if response:
+            print("Gear:", response.gear)
+        test_park.ctrl_pub(1.0,0.0)
 
     except rospy.ROSInterruptException:
         pass
