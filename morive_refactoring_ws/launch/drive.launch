@@ -1,0 +1,14 @@
+<launch>
+    <node pkg="path_planner" type="global_path_pub.py" name="global_path_pub"  />
+    <node pkg="path_planner" type="local_path_pub.py" name="local_path_pub" />
+
+    <node pkg="planner" type="rule_based_planner.py" name="rule_based_planner" output="screen"/>
+    <node pkg="controller" type="longitudinal_controller.py" name="longitudinal_controller" output="screen"/>
+
+    <node pkg="state_estimator" type="gpsimu_parser.py" name="GPS_IMU_parser" />
+
+    <node pkg="map_loader" type="mgeo_pub.py" name="mgeo_pub"  />
+    <node pkg="rviz_runner" type="tf_pub.py" name="tf"  />
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find rviz_runner)/rviz/lane_detection_rviz.rviz"/>
+    
+</launch>

@@ -1,0 +1,14 @@
+.DS_Store
+
+build/
+
+devel/
+
+# Byte-compiled / optimized / DLL files
+
+__pycache__/
+
+*.py[cod]
+
+morive_ws/.catkin_workspace
+morive_ws/src/.vscode/
